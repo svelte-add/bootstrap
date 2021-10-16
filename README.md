@@ -25,3 +25,9 @@ After the adder runs,
 - You can use Bootstrap classes like `card` or `pt-5` in the markup (components, routes, `app.html`).
 
 - You can [customize your Bootstrap theme with variables](https://getbootstrap.com/docs/5.1/customize/sass/) like `$primary` or `$grid-breakpoints` in `src/variables.scss`.
+
+- You can add imports to your `app.scss` to enable more `bootstrap` features.
+  ```
+  @import "bootstrap/scss/navbar";
+  @import "bootstrap/scss/dropdown";
+  ```
