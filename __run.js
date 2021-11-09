@@ -39,7 +39,7 @@ export const run = async ({ install, options, updateCss }) => {
 	await updateCss({
 		path: `/src/app.${extension}`,
 		async style({ postcss }) {
-			const imports = ["root", "reboot", "type", "accordion", "alert", "badge", "breadcrumb", "buttons", "button-group", "card", "carousel", "close", "containers", "dropdown", "forms", "grid", "images", "list-group", "modal", "nav", "navbar", "offcanvas", "pagination", "popover", "progress", "spinners", "toasts", "tooltip", "helpers", "utilities", "utilities/api"];
+			const imports = ["root", "reboot", "type", "accordion", "alert", "badge", "breadcrumb", "buttons", "button-group", "card", "carousel", "close", "containers", "dropdown", "forms", "grid", "images", "list-group", "modal", "nav", "navbar", "offcanvas", "pagination", "popover", "progress", "spinners", "tables", "toasts", "tooltip", "helpers", "utilities", "utilities/api"];
 			imports.reverse();
 
 			const [stylesHintComment] = postcss.nodes.filter((node) => node.type === "comment" && node.text === stylesHint);
