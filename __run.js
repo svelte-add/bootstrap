@@ -2,7 +2,7 @@ import { AtRule, Comment } from "postcss";
 import { extension, stylesHint } from "../scss/stuff.js";
 
 /** @type {import("../../index.js").AdderRun<import("./__metadata.js").Options>} */
-export const run = async ({ install, updateCss }) => {
+export const run = async ({ install, options, updateCss }) => {
 	await updateCss({
 		path: `/src/variables.${extension}`,
 		async style({ postcss }) {
@@ -71,4 +71,6 @@ export const run = async ({ install, updateCss }) => {
 	});
 
 	await install({ package: "bootstrap" });
+
+	if (options.sveltestrap) await install({ package: "sveltestrap" });
 };
