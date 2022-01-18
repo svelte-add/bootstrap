@@ -2,6 +2,11 @@ import { extension } from "../scss/stuff.js";
 
 export const name = "Bootstrap";
 
+/** @type {import("../..").Gatekeep} */
+export const gatekeep = async () => {
+	return { able: true };
+};
+
 /** @typedef {{ sveltestrap: boolean }} Options */
 
 /** @type {import("../..").AdderOptions<Options>} */
