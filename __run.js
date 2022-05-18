@@ -71,6 +71,4 @@ export const run = async ({ install, options, updateCss }) => {
 	});
 
 	await install({ package: "bootstrap" });
-
-	if (options.sveltestrap) await install({ package: "sveltestrap" });
 };

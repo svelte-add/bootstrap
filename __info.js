@@ -11,17 +11,10 @@ export const gatekeep = async () => {
 	return { able: true };
 };
 
-/** @typedef {{ sveltestrap: boolean }} Options */
+/** @typedef {{}} Options */
 
 /** @type {import("../..").AdderOptions<Options>} */
-export const options = {
-	sveltestrap: {
-		context: "It provides Svelte components with client-side interactivity in Bootstrap's style. https://sveltestrap.js.org/",
-		default: false,
-		descriptionMarkdown: "whether or not to install [Sveltestrap](https://github.com/bestguy/sveltestrap).",
-		question: "Do you want to install Sveltestrap?",
-	},
-};
+export const options = {};
 
 /** @type {import("../..").Heuristic[]} */
 export const heuristics = [

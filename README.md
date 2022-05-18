@@ -16,7 +16,7 @@ This adder supports SvelteKit and Vite-powered Svelte apps (all the environments
 
 ### ⚙️ Options
 
-- `sveltestrap` (default `false`): whether or not to install [Sveltestrap](https://github.com/bestguy/sveltestrap).
+This adder doesn't take any options of its own.
 
 ## 🛠 Using Bootstrap
 
