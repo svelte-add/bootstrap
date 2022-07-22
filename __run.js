@@ -26,7 +26,19 @@ export const run = async ({ install, updateCss }) => {
 			postcss.append(
 				new AtRule({
 					name: "import",
+					params: '"bootstrap/scss/maps"',
+				})
+			);
+			postcss.append(
+				new AtRule({
+					name: "import",
 					params: '"bootstrap/scss/mixins"',
+				})
+			);
+			postcss.append(
+				new AtRule({
+					name: "import",
+					params: '"bootstrap/scss/utilities"',
 				})
 			);
 
@@ -39,7 +51,8 @@ export const run = async ({ install, updateCss }) => {
 	await updateCss({
 		path: `/src/app.${extension}`,
 		async style({ postcss }) {
-			const imports = ["root", "reboot", "type", "accordion", "alert", "badge", "breadcrumb", "buttons", "button-group", "card", "carousel", "close", "containers", "dropdown", "forms", "grid", "images", "list-group", "modal", "nav", "navbar", "offcanvas", "pagination", "popover", "progress", "spinners", "tables", "toasts", "tooltip", "helpers", "utilities", "utilities/api"];
+			const imports = ["root", "reboot", "type", "images", "containers", "grid", "tables", "forms", "buttons", "transitions", "dropdown", "button-group", "nav", "navbar", "card", "accordion", "breadcrumb", "pagination", "badge", "alert", "progress", "list-group", "close", "toasts", "modal", "tooltip", "popover", "carousel", "spinners", "offcanvas", "placeholders", "helpers", "utilities/api"];
+			// They will be added with .append or .after, so reverse first to maintain the expected order
 			imports.reverse();
 
 			const [stylesHintComment] = postcss.nodes.filter((node) => node.type === "comment" && node.text === stylesHint);
