@@ -84,4 +84,5 @@ export const run = async ({ install, updateCss }) => {
 	});
 
 	await install({ package: "bootstrap" });
+	await install({ package: "@popperjs/core" });
 };
