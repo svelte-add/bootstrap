@@ -26,6 +26,12 @@ export const run = async ({ install, updateCss }) => {
 			postcss.append(
 				new AtRule({
 					name: "import",
+					params: '"bootstrap/scss/variables-dark"',
+				})
+			);
+			postcss.append(
+				new AtRule({
+					name: "import",
 					params: '"bootstrap/scss/maps"',
 				})
 			);
