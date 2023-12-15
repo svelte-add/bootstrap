@@ -10,42 +10,42 @@ export const run = async ({ install, updateCss }) => {
 				new AtRule({
 					name: "import",
 					params: '"bootstrap/scss/functions"',
-				})
+				}),
 			);
 			postcss.append(
 				new Comment({
 					text: "Override Bootstrap's variables here",
-				})
+				}),
 			);
 			postcss.append(
 				new AtRule({
 					name: "import",
 					params: '"bootstrap/scss/variables"',
-				})
+				}),
 			);
 			postcss.append(
 				new AtRule({
 					name: "import",
 					params: '"bootstrap/scss/variables-dark"',
-				})
+				}),
 			);
 			postcss.append(
 				new AtRule({
 					name: "import",
 					params: '"bootstrap/scss/maps"',
-				})
+				}),
 			);
 			postcss.append(
 				new AtRule({
 					name: "import",
 					params: '"bootstrap/scss/mixins"',
-				})
+				}),
 			);
 			postcss.append(
 				new AtRule({
 					name: "import",
 					params: '"bootstrap/scss/utilities"',
-				})
+				}),
 			);
 
 			return {
